@@ -9,8 +9,22 @@
         <span class="hidden sm:inline">PhoneCallZombie</span>
       </router-link>
 
-      <!-- Desktop Navigation -->
-      <div class="hidden md:flex items-center gap-8">
+      <!-- Dark Mode Toggle + Desktop Navigation -->
+      <div class="hidden md:flex items-center gap-6">
+        <button
+          @click="toggleDarkMode"
+          class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-white dark:hover:bg-opacity-10 transition-colors"
+          aria-label="Toggle dark mode"
+          title="Toggle dark mode"
+        >
+          <svg v-if="!isDark" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+          <svg v-else class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="5" /><path d="M12 1v6m0 6v6M4.22 4.22l4.24 4.24m3.08 3.08l4.24 4.24M1 12h6m6 0h6M4.22 19.78l4.24-4.24m3.08-3.08l4.24-4.24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" />
+          </svg>
+        </button>
+        <div class="flex items-center gap-8">
         <router-link
           to="/"
           class="nav-link"
@@ -47,6 +61,7 @@
         >
           Download
         </a>
+        </div>
       </div>
 
       <!-- Mobile Menu Button -->
@@ -109,9 +124,25 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 
 const mobileMenuOpen = ref(false)
+const isDark = ref(false)
+
+onMounted(() => {
+  isDark.value = document.documentElement.classList.contains('dark')
+})
+
+const toggleDarkMode = () => {
+  isDark.value = !isDark.value
+  if (isDark.value) {
+    document.documentElement.classList.add('dark')
+    localStorage.setItem('theme', 'dark')
+  } else {
+    document.documentElement.classList.remove('dark')
+    localStorage.setItem('theme', 'light')
+  }
+}
 </script>
 
 <style scoped>
