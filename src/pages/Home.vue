@@ -64,7 +64,7 @@ const features = [
     shortDescription: 'Choose your startup screen in Settings',
     description: 'Customize which tab appears when you open the dialer. Whether you prefer Recent, Contacts, or Keypad, PhoneCallZombie lets you choose.',
     useCase: 'Perfect for power users who want quick access to their most-used feature.',
-    image: '/assets/default_tab_pref.png'
+    image: '/phonecallzombie/assets/default_tab_pref.png'
   },
   {
     id: 2,
@@ -72,7 +72,7 @@ const features = [
     shortDescription: 'Privacy-friendly search history toggle',
     description: 'Keep track of your recent searches or disable history for privacy. Full control over your search data.',
     useCase: 'Great for professionals who need to maintain privacy and clear history easily.',
-    image: '/assets/recent_search_feature.png'
+    image: '/phonecallzombie/assets/recent_search_feature.png'
   },
   {
     id: 3,
@@ -80,7 +80,7 @@ const features = [
     shortDescription: 'Busy mode with ready-made messages',
     description: 'Set automatic replies for when you are busy. Choose from pre-made messages or create your own.',
     useCase: 'Ideal for busy professionals who want to let callers know they are unavailable.',
-    image: '/assets/call_handle_edit_top.png'
+    image: '/phonecallzombie/assets/call_handle_edit_top.png'
   },
   {
     id: 4,
@@ -88,7 +88,7 @@ const features = [
     shortDescription: 'Detailed call configuration options',
     description: 'Advanced call management with reply options, forwarding, and call screening.',
     useCase: 'For users who need fine-grained control over how their calls are managed.',
-    image: '/assets/replay_call_handling.png'
+    image: '/phonecallzombie/assets/replay_call_handling.png'
   },
   {
     id: 5,
@@ -96,7 +96,7 @@ const features = [
     shortDescription: 'VCF file backup and restore',
     description: 'Backup your contacts to VCF files or import contacts from other sources. Never lose your data.',
     useCase: 'Essential for migrating between devices or maintaining backup copies.',
-    image: '/assets/imp_exp_screen.png'
+    image: '/phonecallzombie/assets/imp_exp_screen.png'
   },
   {
     id: 6,
@@ -104,7 +104,7 @@ const features = [
     shortDescription: 'Restore deleted contacts within 30 days',
     description: 'Accidentally deleted a contact? No problem. Restore it from the Recycle Bin within 30 days.',
     useCase: 'Provides peace of mind for users who accidentally delete important contacts.',
-    image: '/assets/recycle_bin_feature_ux.png'
+    image: '/phonecallzombie/assets/recycle_bin_feature_ux.png'
   }
 ]
 </script>
